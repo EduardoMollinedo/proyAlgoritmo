@@ -12,6 +12,11 @@ public class Pedidos {
     int id;
     int cantidad;
     double precio;
+    public void ingresar(){}
+    public void enviar(){}
+    public void buscar(){}
+    public void listaPedidos(){}
+  //  public void editar(){}
 
     public void setId(int id) {
         this.id = id;
