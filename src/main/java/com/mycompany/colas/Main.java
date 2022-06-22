@@ -1,5 +1,7 @@
 package com.mycompany.colas;
 
+import java.util.Scanner;
+
 /**
  *
  * @author lalo_
@@ -7,48 +9,67 @@ package com.mycompany.colas;
 public class Main {
 
     public static void main(String[] args) {
-//        System.out.println("PILAS");
-//        Pila pila = new Pila();
-//        pila.apilar(1);
-//        pila.apilar(2);
-//        pila.apilar(3);
-//        pila.apilar(4);
-//        pila.apilar(5);
-//
-//        pila.listar();
-//        System.out.println("Retirando elemento");
-//
-//        pila.retirar();
-//        pila.listar();
-//
-//        System.out.println("Retirando el 2");
-//
-//        pila.remover(2);
-//        pila.listar();
-//
-//        System.out.println("Colocando strings en pila");
-//        pila.apilar("Pepito");
-//        pila.apilar("Jos�");
-//        pila.apilar("Mar�a");
-//        pila.apilar("Juana");
-//
-//        pila.listar();
-//
-        System.out.println("COLAS");
-        System.out.println("Clientes Empresariales");
-        Cola cola = new Cola();
-        cola.insertar(new Cliente("Pepito", 70025325));
-        cola.insertar(new Cliente("Jos�", 77024315));
-        cola.insertar(new Cliente("Mar�a", 72735824));
-        cola.extraer();
-        cola.extraer();
-        System.out.println(cola.toString());
-        System.out.println("Clientes Premium");
-        Cola cola2 = new Cola();
-        cola2.insertar(new Cliente("Luis", 70045725));
-        cola2.insertar(new Cliente("Rosa", 77052515));
-        cola2.insertar(new Cliente("Mario", 72463824));
+        Scanner sc = new Scanner(System.in);
+        Cola colaPedidos = new Cola();
+   //     Pedidos ejem = new Pedidos();
+        
+//        Fruta xxx = new Fruta("Manzana", 2, 2.9);
+//        Item<Fruta> item = new Item<Fruta>(xxx);
+//        Pila pilaa = new Pila();
+//        pilaa.apilar(item);
+//        
+//        Pedidos p = new Pedidos("edu",pilaa,22.3);
+//        colaPedidos.insertar(p);
+//       // System.out.println("hola");
+//        System.out.println(colaPedidos.contar());
+//        System.out.println(colaPedidos);
+        
+        boolean fl = true;
+        while (fl) {
+            System.out.println("*********BODEGUITA**********");
+            System.out.println("Ingrese opcion\n1.- Ingresar Pedidos\n2.- Mostrar pedidos"
+                    + "\n3.- Atender Pedido\n4.- Salir");
+            int opcion = sc.nextInt();
+            switch (opcion) {
+                case 1: {
+                    Pedidos p = new Pedidos();
+                    p.ingresar();
+                    colaPedidos.insertar(p);
+                    break;
+                }
+                case 2: {
+                    System.out.println(colaPedidos.toString());
 
-        System.out.println(cola2.toString());
+                    break;
+                }
+                case 3: {
+                    colaPedidos.extraer();
+                    System.out.println("Atendiendo pedido en cola....");
+                    break;
+                }
+                case 4: {
+                    fl = false;
+                }
+            }
+        }
+
+        
+
+        
+//        System.out.println("Ingrese opcion\n1.- Ingresar Pedidos\n2.- Mostrar pedidos\n3.- Atender Pedido\n4.- Buscar");
+//        int opcion = hola.nextInt();
+//        
+//        switch(opcion){
+//            case 1 :
+//                for(int i=0; i<nPedidos; i++){
+//                    Pedidos p = new Pedidos();
+//                    listaPedidos[i]=p;
+//                    p.ingresar();
+//                }
+//                break;
+//        }
+
+       
+        
     }
 }
