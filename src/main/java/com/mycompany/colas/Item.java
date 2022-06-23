@@ -17,18 +17,10 @@ public class Item<T> {
         this.alimento = dato;
     }
 
-    public T dame() {
-        return this.alimento;
-    }
-
+ 
     public void setPrecioTotal(double precioTotal) {
         this.precioTotal = precioTotal;
     }
-
-    public void pon(T x) {
-        this.alimento = x;
-    }
-
     public String toString() {
         return alimento.toString();
     }

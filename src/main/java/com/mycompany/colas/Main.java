@@ -11,6 +11,30 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Cola colaPedidos = new Cola();
+        HashC<String> h = new HashC<String>(11);
+        h.insert(34, "Faraon");
+        h.insert(3, "Pedrito");
+        h.insert(7, "Castillo");
+        h.insert(30, "Fiu Fiu");
+        h.insert(5, "Aguacate");
+        h.insert(14, "Dr Strange");
+        h.insert(23, "Cali");
+         h.insert(23, "Cali");
+        h.insert(22, "Algoritmos");
+        h.insert(8, "Estructuras");
+        h.insert(13, "Datos");
+        System.out.println(h.toString());
+//        h.delete(34);
+//        System.out.println("New Table 2.0");
+//        System.out.println(h.toString());
+//        h.insert(34, "Faraon");
+//        System.out.println("New Table3.0 insertando en posici\u00f3n eliminada");
+//        System.out.println(h.toString());        
+//        
+        
+        
+        
+        
    //     Pedidos ejem = new Pedidos();
         
 //        Fruta xxx = new Fruta("Manzana", 2, 2.9);
@@ -23,7 +47,7 @@ public class Main {
 //       // System.out.println("hola");
 //        System.out.println(colaPedidos.contar());
 //        System.out.println(colaPedidos);
-        
+        /*
         boolean fl = true;
         while (fl) {
             System.out.println("*********BODEGUITA**********");
@@ -53,7 +77,7 @@ public class Main {
             }
         }
 
-        
+        */
 
         
 //        System.out.println("Ingrese opcion\n1.- Ingresar Pedidos\n2.- Mostrar pedidos\n3.- Atender Pedido\n4.- Buscar");
